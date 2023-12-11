@@ -1,0 +1,376 @@
+@font-face {
+    font-family: 'Oswald Regular';
+    src: url('../fonts/Oswald/static/Oswald-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Oswald Light';
+    src: url('../fonts/Oswald/static/Oswald-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/Roboto/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'Roboto MediumItalic';
+    src: url('../fonts/Roboto/Roboto-MediumItalic.ttf');
+}
+
+
+html {
+    font-size: 18px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.container{
+    max-width: 1920px;
+    margin: auto;
+}
+
+h1{
+    font-family: 'Oswald Regular';
+    letter-spacing: 2px;
+}
+
+
+
+header{
+    background-color: #353383;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .logo{
+    display: flex;
+    padding: 1.5rem 0 1.5rem 0;
+    justify-content: center;
+    align-items: center;
+}
+
+header .logo h1{
+    text-align: center;
+    color: #fff;
+    font-family: 'Oswald Regular';
+    font-size: 1.5rem;
+}
+
+header .fa-solid{
+    display: none;
+}
+
+
+
+header .logo .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header .logo h2{
+    text-align: center;
+    color: #fff;
+    font-family: 'Oswald Light';
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+header .menu .a{
+    color: #fff;
+    font-family: 'Oswald Regular';
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding: 0.25rem 2rem;
+    transition: 0.5s;
+}
+
+header .menu .a:hover{
+    background-color: #fff;
+    color: #353383;
+    transition: 0.5s;
+}
+
+header .menu{
+    margin: 0 auto 0.25rem auto;
+
+}
+
+.fixed_nav{
+    width: auto;
+}
+
+.fixed_nav .menu{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.container_link_menu{
+    display: flex;
+    align-items: center;
+}
+
+.link_menu{
+    position: relative;
+    width: 100%;
+
+}
+
+.container_tabs{
+    position: relative;
+}
+
+.tabs_link{
+    position: absolute;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(3, 32%);
+    column-gap: 2%;
+    row-gap: 1rem;
+    background-color: #fff;
+    display: none;
+    box-shadow: 6px 6px 27px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.tabs_link a{
+    font-family: 'Roboto Regular';
+    font-size: 1rem;
+    color: #353383;
+    padding: auto;
+}
+
+
+
+
+
+
+main{
+    width: 85%;
+    margin: auto;
+}
+
+
+.many_text{
+    margin: 2rem auto 2rem auto;
+}
+
+.many_text h1{
+    font-size: 2rem;
+}
+
+.many_text p{
+    font-size: 1.25rem;
+    font-family: 'Roboto Regular';
+    line-height: 2rem;
+}
+
+.many_text hr{
+    margin: 1rem 0 1rem 0;
+}
+
+
+
+.slider_item_content .content{
+    display: flex;
+    font-family: 'Roboto Regular';
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+.slider_item_content h2{
+    font-family: 'Oswald Regular';
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+}
+
+.slider_item_content .content .text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 48%;
+}
+
+.slider_item_content .content .text h3{
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+
+.sliders_container{
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.sliders_container .sliders_line{
+    display: flex;
+    transition: all ease .5s;
+    align-items: center;
+}
+
+.sliders_container .sliders_line .content img{
+    width: 50%;
+}
+
+.buttons_sliders{
+    display: flex;
+    align-items: center;
+}
+
+.buttons_sliders .controlls{
+    width: 2rem;
+    height: 2rem;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+    font-size: 2rem;
+}
+
+ul li{
+    list-style: none;
+    font-size: 1rem;
+}
+
+ul li::before{
+    content: url('../img/chevron-right-solid.svg');
+    margin-right: 0.5rem;
+}
+
+ul span li{
+    font-family: 'Roboto MediumItalic';
+}
+
+
+
+ 
+@media (max-width: 480px){
+
+    html{
+        font-size: 12px;
+    }
+
+
+
+    header .logo img{
+        width: 25%;
+    }
+
+    header .logo .text hr,
+    header .logo .text h2{
+
+    }
+
+    header nav{
+        display: flex;
+        flex-direction: column;
+    }
+    
+
+
+
+    .slider_item_content h2{
+        font-size: 1.25rem;
+    }
+
+    .sliders_container .sliders_line{
+        align-items: start;
+    }
+
+    .slider_item_content .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider_item_content .content .text .list:nth-child(1){
+        width: 40%;
+    }
+
+    .slider_item_content .content .text .list:nth-child(2){
+        width: 59%;
+        margin-bottom: 0.5rem;
+    }
+
+    .slider_item_content .content .text{
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .sliders_container .sliders_line .content img{
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+
+}
+
+
+
+@media (min-width: 481px) and (max-width: 1023px) {
+    html{
+        font-size: 14px;
+    }
+
+
+    .slider_item_content h2{
+        font-size: 1.25rem;
+    }
+
+    .sliders_container .sliders_line{
+        align-items: start;
+    }
+
+    .slider_item_content .content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .slider_item_content .content .text .list:nth-child(1){
+        width: 40%;
+    }
+
+    .slider_item_content .content .text .list:nth-child(2){
+        width: 59%;
+        margin-bottom: 0.5rem;
+    }
+
+    .slider_item_content .content .text{
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: start;
+        flex-wrap: wrap;
+    }
+
+    .sliders_container .sliders_line .content img{
+        width: 100%;
+        margin-bottom: 0.75rem;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    html{
+        font-size: 14px;
+    }
+
+    .sliders_container{
+        width: 95%;
+    }
+
+
+    .sliders_container .sliders_line .slider_item_content .text h3{
+        margin: 0;
+    }
+    
+}
+
